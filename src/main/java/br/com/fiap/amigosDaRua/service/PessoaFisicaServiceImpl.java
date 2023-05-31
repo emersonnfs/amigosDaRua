@@ -16,6 +16,7 @@ public class PessoaFisicaServiceImpl implements PessoaFisicaService{
     @Autowired
     private PessoaFisicaMapperFactory pessoaFisicaMapperFactory;
 
+    @Override
     public void createPessoaFisica(InsertPessoaFisica insertPessoaFisica){
         var pessoaFisica = pessoaFisicaMapperFactory.createEntityFromModel(insertPessoaFisica);
         pessoaFisicaRepository.save(pessoaFisica);

@@ -23,10 +23,10 @@ public class Local {
     @Column(name = "nm_local")
     private String nome;
 
-    @Column(name = "nr_latitude")
+    @Column(name = "nr_latitude", precision = 11, scale = 8)
     private BigDecimal latitude;
 
-    @Column(name = "nr_longitude")
+    @Column(name = "nr_longitude", precision = 11, scale = 8)
     private BigDecimal longitude;
 
     @OneToMany(mappedBy = "local", cascade = CascadeType.ALL)

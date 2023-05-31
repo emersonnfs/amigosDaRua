@@ -4,6 +4,7 @@ import br.com.fiap.amigosDaRua.entities.Credencial;
 import br.com.fiap.amigosDaRua.entities.Usuario;
 import br.com.fiap.amigosDaRua.entities.factories.UsuarioMapperFactory;
 import br.com.fiap.amigosDaRua.models.GetUsuarioModel;
+import br.com.fiap.amigosDaRua.models.LoginResponseModel;
 import br.com.fiap.amigosDaRua.models.SenhaAtualizacaoRequest;
 import br.com.fiap.amigosDaRua.models.UpdateUsuarioModel;
 import br.com.fiap.amigosDaRua.repositories.UsuarioRepository;
@@ -26,6 +27,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RestController
@@ -61,7 +63,13 @@ public class UsuarioController {
     public ResponseEntity<Object> login(@RequestBody @Valid Credencial credencial){
         manager.authenticate(credencial.toAuthentication());
         var token = tokenService.generateToken(credencial);
-        return ResponseEntity.ok(token);
+        Optional<Usuario> usuario = repository.findByEmail(credencial.email());
+        if (usuario.isPresent()){
+            Long id = usuario.get().getId();
+            LoginResponseModel response = new LoginResponseModel(token, id);
+            return ResponseEntity.ok(response);
+        }
+        return ResponseEntity.badRequest().build();
     }
 
     @PostMapping("/api/usuario/{id}/atualizar-senha")

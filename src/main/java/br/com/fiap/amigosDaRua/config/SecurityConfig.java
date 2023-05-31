@@ -23,9 +23,9 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
         return http
                 .authorizeHttpRequests()
-                .requestMatchers(HttpMethod.POST, "/api/registrar").permitAll()
-                .requestMatchers(HttpMethod.POST, "/api/login").permitAll()
-                .anyRequest().authenticated()
+                .requestMatchers(HttpMethod.POST, "/api/pessoafisica").authenticated()
+                .requestMatchers(HttpMethod.POST, "/api/pessoajuridica").authenticated()
+                .anyRequest().permitAll()
                 .and()
                 .csrf().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
