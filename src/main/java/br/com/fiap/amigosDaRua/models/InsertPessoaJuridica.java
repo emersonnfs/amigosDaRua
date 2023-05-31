@@ -10,9 +10,9 @@ import java.math.BigInteger;
 @AllArgsConstructor
 @NoArgsConstructor
 public class InsertPessoaJuridica {
-    private BigInteger cnpj;
+    private String cnpj;
     private String nomeFantasia;
-    private BigInteger inscricaoMunicipal;
+    private String inscricaoMunicipal;
     private String ramoAtividade;
     private Long idUsuario;
 }

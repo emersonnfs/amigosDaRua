@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 public class PessoaJuridicaMapperFactory {
     private ModelMapper modelMapper;
 
+    @Autowired
     private UsuarioRepository usuarioRepository;
 
     public PessoaJuridicaMapperFactory(){

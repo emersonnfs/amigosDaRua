@@ -4,12 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.math.BigInteger;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UpdateUsuarioModel {
-    private String email;
-    private String telefone;
+public class InsertLocalModel {
+    private String nome;
+    private String latitude;
+    private String longitude;
 }

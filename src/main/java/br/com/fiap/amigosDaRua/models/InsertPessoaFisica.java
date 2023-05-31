@@ -11,8 +11,8 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 public class InsertPessoaFisica {
-    private BigInteger rg;
-    private BigInteger cpf;
+    private String rg;
+    private String cpf;
     private LocalDate dataNascimento;
     private Long idUsuario;
 }

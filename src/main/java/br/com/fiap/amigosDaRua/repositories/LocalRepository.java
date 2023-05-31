@@ -1,9 +1,9 @@
 package br.com.fiap.amigosDaRua.repositories;
 
-import br.com.fiap.amigosDaRua.entities.PessoaJuridica;
+import br.com.fiap.amigosDaRua.entities.Local;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PessoaJuridicaRepository extends JpaRepository<PessoaJuridica,Long> {
+public interface LocalRepository extends JpaRepository<Local, Long> {
 }
