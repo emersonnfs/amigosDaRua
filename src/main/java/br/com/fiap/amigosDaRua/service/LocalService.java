@@ -1,5 +1,6 @@
 package br.com.fiap.amigosDaRua.service;
 
+import br.com.fiap.amigosDaRua.entities.Local;
 import br.com.fiap.amigosDaRua.models.GetLocalModel;
 import br.com.fiap.amigosDaRua.models.InsertLocalModel;
 import org.springframework.data.domain.Page;
@@ -8,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface LocalService {
-    void createLocal(InsertLocalModel insertLocalModel);
+    Local createLocal(InsertLocalModel insertLocalModel);
 
     Page<GetLocalModel> getAllLocais(Pageable pageable);
 

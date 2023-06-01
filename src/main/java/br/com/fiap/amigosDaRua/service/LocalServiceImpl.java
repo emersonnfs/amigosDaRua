@@ -21,9 +21,9 @@ public class LocalServiceImpl implements LocalService{
     private LocalMapperFactory localMapperFactory;
 
     @Override
-    public void createLocal(InsertLocalModel insertLocalModel){
+    public Local createLocal(InsertLocalModel insertLocalModel){
         var local = localMapperFactory.createEntityFromModel(insertLocalModel);
-        localRepository.save(local);
+        return localRepository.save(local);
     }
 
     @Override

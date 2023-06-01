@@ -1,5 +1,7 @@
 package br.com.fiap.amigosDaRua.controllers;
 
+import br.com.fiap.amigosDaRua.entities.PessoaJuridica;
+import br.com.fiap.amigosDaRua.models.GetPessoaJuridicaModel;
 import br.com.fiap.amigosDaRua.models.InsertPessoaJuridica;
 import br.com.fiap.amigosDaRua.service.PessoaJuridicaService;
 import br.com.fiap.amigosDaRua.service.UsuarioService;
@@ -22,8 +24,9 @@ public class PessoaJuridicaController {
 
     @PostMapping
     public ResponseEntity<Object> create(@RequestBody @Valid InsertPessoaJuridica model){
-        pessoaJuridicaService.createPessoaJuridica(model);
-        return ResponseEntity.status(HttpStatus.CREATED).body(model);
+        PessoaJuridica pessoa = pessoaJuridicaService.createPessoaJuridica(model);
+        GetPessoaJuridicaModel pessoaResponse = pessoaJuridicaService.getPessoaJuridicaById(pessoa.getId());
+        return ResponseEntity.ok(pessoaResponse);
     }
 
     @GetMapping("/{id}")

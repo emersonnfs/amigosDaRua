@@ -28,8 +28,9 @@ public class LocalController {
 
     @PostMapping
     public ResponseEntity<Object> create(@RequestBody @Valid InsertLocalModel local){
-        localService.createLocal(local);
-        return ResponseEntity.status(HttpStatus.CREATED).body(local);
+        var localEntity = localService.createLocal(local);
+        var localModel = localService.getLocalById(localEntity.getId());
+        return ResponseEntity.ok(localModel);
     }
 
     @GetMapping

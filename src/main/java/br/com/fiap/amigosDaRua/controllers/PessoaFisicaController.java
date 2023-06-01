@@ -24,8 +24,9 @@ public class PessoaFisicaController {
 
     @PostMapping
     public ResponseEntity<Object> create(@RequestBody @Valid InsertPessoaFisica model){
-        pessoaFisicaService.createPessoaFisica(model);
-        return ResponseEntity.status(HttpStatus.CREATED).body(model);
+        var pessoaFisica = pessoaFisicaService.createPessoaFisica(model);
+        GetPessoaFisicaModel pessoaResponse = pessoaFisicaService.getPessoaFisicaById(pessoaFisica.getId());
+        return ResponseEntity.ok(pessoaResponse);
     }
 
     @GetMapping("/{id}")

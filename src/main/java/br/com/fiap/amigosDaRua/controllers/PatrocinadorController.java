@@ -28,8 +28,9 @@ public class PatrocinadorController {
 
     @PostMapping
     public ResponseEntity<Object> create(@RequestBody @Valid InsertPatrocinadorModel model){
-        patrocinadorService.createPatrocinador(model);
-        return ResponseEntity.status(HttpStatus.CREATED).body(model);
+        var patrocinadorEntity = patrocinadorService.createPatrocinador(model);
+        var patrocinadorModel = patrocinadorService.getPatrocinadorById(patrocinadorEntity.getId());
+        return ResponseEntity.ok(patrocinadorModel);
     }
 
     @GetMapping

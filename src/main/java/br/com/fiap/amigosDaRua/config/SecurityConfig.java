@@ -29,6 +29,7 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.POST, "/api/patrocinador").authenticated()
                 .requestMatchers(HttpMethod.PUT, "/api/usuario/{id}").authenticated()
                 .requestMatchers(HttpMethod.POST, "/api/usuario/{id}/atualizar-senha").authenticated()
+                .requestMatchers(HttpMethod.POST, "/api/evento").authenticated()
                 .anyRequest().permitAll()
                 .and()
                 .csrf().disable()

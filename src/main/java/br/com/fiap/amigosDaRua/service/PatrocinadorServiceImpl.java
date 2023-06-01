@@ -20,9 +20,9 @@ public class PatrocinadorServiceImpl implements PatrocinadorService{
     private PatrocinadorMapperFactory patrocinadorMapperFactory;
 
     @Override
-    public void createPatrocinador(InsertPatrocinadorModel insertPatrocinadorModel){
+    public Patrocinador createPatrocinador(InsertPatrocinadorModel insertPatrocinadorModel){
         var patrocinador = patrocinadorMapperFactory.createEntityFromModel(insertPatrocinadorModel);
-        patrocinadorRepository.save(patrocinador);
+        return patrocinadorRepository.save(patrocinador);
     }
 
     @Override

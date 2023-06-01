@@ -1,6 +1,7 @@
 package br.com.fiap.amigosDaRua.service;
 
 import br.com.fiap.amigosDaRua.entities.PessoaFisica;
+import br.com.fiap.amigosDaRua.entities.PessoaJuridica;
 import br.com.fiap.amigosDaRua.entities.factories.PessoaFisicaMapperFactory;
 import br.com.fiap.amigosDaRua.models.GetPessoaFisicaModel;
 import br.com.fiap.amigosDaRua.models.InsertPessoaFisica;
@@ -17,9 +18,9 @@ public class PessoaFisicaServiceImpl implements PessoaFisicaService{
     private PessoaFisicaMapperFactory pessoaFisicaMapperFactory;
 
     @Override
-    public void createPessoaFisica(InsertPessoaFisica insertPessoaFisica){
+    public PessoaFisica createPessoaFisica(InsertPessoaFisica insertPessoaFisica){
         var pessoaFisica = pessoaFisicaMapperFactory.createEntityFromModel(insertPessoaFisica);
-        pessoaFisicaRepository.save(pessoaFisica);
+        return pessoaFisicaRepository.save(pessoaFisica);
     }
 
     @Override
