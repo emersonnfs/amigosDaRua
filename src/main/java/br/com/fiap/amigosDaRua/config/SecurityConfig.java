@@ -23,8 +23,6 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
         return http
                 .authorizeHttpRequests()
-                .requestMatchers(HttpMethod.POST, "/api/pessoafisica").authenticated()
-                .requestMatchers(HttpMethod.POST, "/api/pessoajuridica").authenticated()
                 .requestMatchers(HttpMethod.POST, "/api/local").authenticated()
                 .requestMatchers(HttpMethod.POST, "/api/patrocinador").authenticated()
                 .requestMatchers(HttpMethod.PUT, "/api/usuario/{id}").authenticated()
