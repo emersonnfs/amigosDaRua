@@ -17,4 +17,5 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
     @Query(value = "SELECT u FROM Usuario u WHERE LOWER(u.nome) LIKE LOWER(CONCAT('%', :nome, '%'))",
             countQuery = "SELECT COUNT(u) FROM Usuario u WHERE LOWER(u.nome) LIKE LOWER(CONCAT('%', :nome, '%'))")
     Page<Usuario> findByNomeIgnoreCaseContaining(@Param("nome") String nome, Pageable pageable);
+
 }

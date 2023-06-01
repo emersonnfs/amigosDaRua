@@ -23,7 +23,8 @@ public class PessoaFisicaMapperFactory {
 
     public PessoaFisica createEntityFromModel(InsertPessoaFisica model){
         var entity = modelMapper.map(model, PessoaFisica.class);
-        entity.setUsuario(usuarioRepository.getReferenceById(model.getIdUsuario()));
+        Long idUsuario = Long.parseLong(model.getIdUsuario());
+        entity.setUsuario(usuarioRepository.getReferenceById(idUsuario));
         return entity;
     }
 

@@ -14,5 +14,5 @@ public class InsertPessoaJuridica {
     private String nomeFantasia;
     private String inscricaoMunicipal;
     private String ramoAtividade;
-    private Long idUsuario;
+    private String idUsuario;
 }

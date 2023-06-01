@@ -23,7 +23,7 @@ public class Patrocinador {
     private String nome;
 
     @Column(name = "tp_patrocinador")
-    private String tipo;
+    private TipoPatrocinadorEnum tipo;
 
     @OneToMany(mappedBy = "patrocinador", cascade = CascadeType.ALL)
     @JsonIgnore

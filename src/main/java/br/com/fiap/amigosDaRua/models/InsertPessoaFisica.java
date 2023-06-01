@@ -14,5 +14,5 @@ public class InsertPessoaFisica {
     private String rg;
     private String cpf;
     private LocalDate dataNascimento;
-    private Long idUsuario;
+    private String idUsuario;
 }

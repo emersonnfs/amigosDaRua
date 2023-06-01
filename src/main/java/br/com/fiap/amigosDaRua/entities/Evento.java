@@ -30,7 +30,7 @@ public class Evento {
     private LocalDateTime horaFim;
 
     @Column(name = "tp_evento")
-    private String tipo;
+    private TipoEventoEnum tipo;
 
     @ManyToOne
     @JoinColumn(name = "id_responsavel")

@@ -1,5 +1,6 @@
 package br.com.fiap.amigosDaRua.controllers;
 
+import br.com.fiap.amigosDaRua.entities.PessoaFisica;
 import br.com.fiap.amigosDaRua.models.GetPessoaFisicaModel;
 import br.com.fiap.amigosDaRua.models.InsertPessoaFisica;
 import br.com.fiap.amigosDaRua.service.PessoaFisicaService;
