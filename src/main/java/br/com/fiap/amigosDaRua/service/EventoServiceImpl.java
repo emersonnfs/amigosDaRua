@@ -58,6 +58,12 @@ public class EventoServiceImpl implements EventoService{
     }
 
     @Override
+    public Page<GetEventoModel> getAllByHoraFimBeforeCurrentDateTime(LocalDateTime currentDateTime, Pageable pageable){
+        var eventos = eventoRepository.findAllByHoraFimBeforeCurrentDateTime(currentDateTime, pageable);
+        return eventos.map(this::convertToGetEventoModel);
+    }
+
+    @Override
     public Page<GetEventoModel> getAllEventos(Pageable pageable){
         var eventos = eventoRepository.findAll(pageable);
         return eventos.map(this::convertToGetEventoModel);

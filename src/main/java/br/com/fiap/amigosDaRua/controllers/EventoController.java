@@ -67,6 +67,24 @@ public class EventoController {
         return CollectionModel.of(eventoModels, link);
     }
 
+    @GetMapping("/indisponivel")
+    public CollectionModel<EntityModel<GetEventoModel>> getAllIndisponivel(
+            @PageableDefault(sort = "horaInicio", direction = Sort.Direction.DESC, page = 0, size = 3)
+            Pageable pageable) {
+        LocalDateTime dataAtual = LocalDateTime.now();
+        Page<GetEventoModel> eventos = eventoService.getAllByHoraFimBeforeCurrentDateTime(dataAtual, pageable);
+        List<EntityModel<GetEventoModel>> eventoModels = eventos.stream()
+                .map(evento -> EntityModel.of(evento,
+                        WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(EventoController.class)
+                                .getAllDisponivel(pageable)).withRel("eventosDispoiniveis"),
+                        WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(EventoController.class)
+                                .getEventoById(evento.getId())).withSelfRel()))
+                .collect(Collectors.toList());
+
+        Link link = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(EventoController.class).getAllIndisponivel(pageable)).withSelfRel();
+        return CollectionModel.of(eventoModels, link);
+    }
+
     @GetMapping("/{id}")
     public EntityModel<GetEventoModel> getEventoById(@PathVariable Long id) {
         var evento = eventoService.getEventoById(id);

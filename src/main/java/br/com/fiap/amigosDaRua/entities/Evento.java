@@ -17,10 +17,10 @@ import java.util.List;
 public class Evento {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id_evento")
+    @Column(name = "id_evento", precision = 38, scale = 0, nullable = false, updatable = false)
     private Long id;
 
-    @Column(name = "nm_evento")
+    @Column(name = "nm_evento", precision = 255)
     private String nome;
 
     @Column(name = "hora_inicio")

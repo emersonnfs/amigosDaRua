@@ -17,10 +17,10 @@ import java.util.List;
 public class Local {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id_local")
+    @Column(name = "id_local", precision = 38, scale = 0, nullable = false, updatable = false)
     private Long id;
 
-    @Column(name = "nm_local")
+    @Column(name = "nm_local", precision = 255)
     private String nome;
 
     @Column(name = "nr_latitude", precision = 11, scale = 8)

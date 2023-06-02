@@ -14,4 +14,7 @@ import java.util.List;
 public interface EventoRepository extends JpaRepository<Evento,Long> {
     @Query("SELECT e FROM Evento e WHERE e.horaFim > :currentDateTime")
     Page<Evento> findAllByHoraFimAfterCurrentDateTime(LocalDateTime currentDateTime, Pageable pageable);
+
+    @Query("SELECT e FROM Evento e WHERE e.horaFim <= :currentDateTime")
+    Page<Evento> findAllByHoraFimBeforeCurrentDateTime(LocalDateTime currentDateTime, Pageable pageable);
 }

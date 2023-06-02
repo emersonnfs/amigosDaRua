@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 public class Parceria {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id_parceria")
+    @Column(name = "id_parceria", precision = 38, scale = 0, nullable = false, updatable = false)
     private Long id;
 
     @ManyToOne

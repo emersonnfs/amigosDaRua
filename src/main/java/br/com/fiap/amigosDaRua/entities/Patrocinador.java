@@ -16,10 +16,10 @@ import java.util.List;
 public class Patrocinador {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id_patrocinador")
+    @Column(name = "id_patrocinador", precision = 38, scale = 0, nullable = false, updatable = false)
     private Long id;
 
-    @Column(name = "nm_patrocinador")
+    @Column(name = "nm_patrocinador", precision = 255)
     private String nome;
 
     @Column(name = "tp_patrocinador")

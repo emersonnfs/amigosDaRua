@@ -14,5 +14,6 @@ public interface EventoService {
     Evento createEvento(InsertEventoModel insertEventoModel);
     Page<GetEventoModel> getAllEventos(Pageable pageable);
     Page<GetEventoModel> getAllByHoraFimAfterCurrentDateTime(LocalDateTime currentDateTime, Pageable pageable);
+    Page<GetEventoModel> getAllByHoraFimBeforeCurrentDateTime(LocalDateTime currentDateTime, Pageable pageable);
     GetEventoModel getEventoById(Long id);
 }
