@@ -15,22 +15,22 @@ import java.math.BigInteger;
 public class PessoaJuridica {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id_pessoa_juridica")
+    @Column(name = "id_pessoa_juridica", precision = 38, scale = 0, nullable = false, updatable = false)
     private Long id;
 
-    @Column(name = "nr_cnpj")
+    @Column(name = "nr_cnpj", precision = 14, scale = 0)
     private BigInteger cnpj;
 
-    @Column(name = "nm_fantasia")
+    @Column(name = "nm_fantasia", precision = 255)
     private String nomeFantasia;
 
-    @Column(name = "nr_insc_estadual")
+    @Column(name = "nr_insc_estadual", precision = 14, scale = 0)
     private BigInteger inscricaoMunicipal;
 
-    @Column(name = "ds_ramo_atividade")
+    @Column(name = "ds_ramo_atividade", precision = 255)
     private String ramoAtividade;
 
     @OneToOne
-    @JoinColumn(name = "id_responsavel")
+    @JoinColumn(name = "id_responsavel", foreignKey = @ForeignKey(name = "fk_responsavel_juridica"))
     Usuario usuario;
 }

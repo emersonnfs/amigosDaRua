@@ -16,19 +16,19 @@ import java.time.LocalDate;
 public class PessoaFisica {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id_pessoa_fisica")
+    @Column(name = "id_pessoa_fisica", precision = 38, scale = 0, nullable = false, updatable = false)
     private Long id;
 
-    @Column(name = "nr_rg")
+    @Column(name = "nr_rg", precision = 9, scale = 0)
     private BigInteger rg;
 
-    @Column(name = "nr_cpf")
+    @Column(name = "nr_cpf", precision = 11, scale = 0)
     private BigInteger cpf;
 
     @Column(name = "dt_nascimento")
     private LocalDate dataNascimento;
 
     @OneToOne
-    @JoinColumn(name = "id_responsavel")
+    @JoinColumn(name = "id_responsavel", foreignKey = @ForeignKey(name = "fk_responsavel_fisica"))
     Usuario usuario;
 }

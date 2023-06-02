@@ -21,23 +21,25 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "tb_ar_responsavel")
+@Table(name = "tb_ar_responsavel", indexes = {
+        @Index(name = "uk_ds_email", columnList = "ds_email", unique = true)
+    })
 public class Usuario implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id_responsavel")
+    @Column(name = "id_responsavel", precision = 38, scale = 0, nullable = false, updatable = false)
     private Long id;
 
-    @Column(name = "nm_responsavel")
+    @Column(name = "nm_responsavel", precision = 255)
     private String nome;
 
-    @Column(name = "nr_telefone")
+    @Column(name = "nr_telefone", precision = 14, scale = 0)
     private BigInteger telefone;
 
-    @Column(name = "ds_email")
+    @Column(name = "ds_email", precision = 255 )
     private String email;
 
-    @Column(name = "ds_senha")
+    @Column(name = "ds_senha", precision = 255)
     private String senha;
 
     @OneToOne(mappedBy = "usuario", cascade = CascadeType.ALL)
