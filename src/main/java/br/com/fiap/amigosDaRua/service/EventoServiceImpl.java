@@ -75,6 +75,13 @@ public class EventoServiceImpl implements EventoService{
         return convertToGetEventoModel(evento);
     }
 
+    @Override
+    public Evento updateEvento(Long id, InsertEventoModel insertEventoModel){
+        var evento = eventoRepository.findById(id).orElseThrow();
+        eventoMapperFactory.updateEntityFromModel(insertEventoModel, evento);
+        return eventoRepository.save(evento);
+    }
+
     private GetEventoModel convertToGetEventoModel(Evento evento){
         return eventoMapperFactory.createModelFromEntity(evento);
     }

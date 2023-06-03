@@ -7,6 +7,7 @@ import br.com.fiap.amigosDaRua.models.GetEventoModel;
 import br.com.fiap.amigosDaRua.models.GetPatrocinadorModel;
 import br.com.fiap.amigosDaRua.models.InsertEventoModel;
 import br.com.fiap.amigosDaRua.repositories.*;
+import org.modelmapper.Conditions;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.PropertyMap;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,5 +67,13 @@ public class EventoMapperFactory {
         }
         entityModel.setPatrocinadores(listaPatrocinadores);
         return entityModel;
+    }
+
+    public Evento updateEntityFromModel(InsertEventoModel model, Evento entity) {
+        modelMapper.getConfiguration().setPropertyCondition(Conditions.isNotNull());
+
+        modelMapper.map(model, entity);
+        return entity;
+
     }
 }

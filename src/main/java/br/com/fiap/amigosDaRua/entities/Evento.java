@@ -17,7 +17,7 @@ import java.util.List;
 public class Evento {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id_evento", precision = 38, scale = 0, nullable = false, updatable = false)
+    @Column(name = "id_evento", precision = 38, scale = 0)
     private Long id;
 
     @Column(name = "nm_evento", precision = 255)
@@ -33,11 +33,11 @@ public class Evento {
     private TipoEventoEnum tipo;
 
     @ManyToOne
-    @JoinColumn(name = "id_responsavel", foreignKey = @ForeignKey(name = "fk_responsavel_evento"))
+    @JoinColumn(name = "id_responsavel")
     private Usuario usuario;
 
     @ManyToOne
-    @JoinColumn(name = "id_local", foreignKey = @ForeignKey(name = "fk_local_evento"))
+    @JoinColumn(name = "id_local")
     private Local local;
 
     @OneToMany(mappedBy = "evento", cascade = CascadeType.ALL)

@@ -15,7 +15,7 @@ import java.math.BigInteger;
 public class PessoaJuridica {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id_pessoa_juridica", precision = 38, scale = 0, nullable = false, updatable = false)
+    @Column(name = "id_pessoa_juridica", precision = 38, scale = 0)
     private Long id;
 
     @Column(name = "nr_cnpj", precision = 14, scale = 0)
@@ -31,6 +31,6 @@ public class PessoaJuridica {
     private String ramoAtividade;
 
     @OneToOne
-    @JoinColumn(name = "id_responsavel", foreignKey = @ForeignKey(name = "fk_responsavel_juridica"))
+    @JoinColumn(name = "id_responsavel")
     Usuario usuario;
 }

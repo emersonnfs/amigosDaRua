@@ -27,7 +27,7 @@ import java.util.UUID;
 public class Usuario implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id_responsavel", precision = 38, scale = 0, nullable = false, updatable = false)
+    @Column(name = "id_responsavel", precision = 38, scale = 0)
     private Long id;
 
     @Column(name = "nm_responsavel", precision = 255)

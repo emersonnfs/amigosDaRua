@@ -17,7 +17,7 @@ import java.util.List;
 public class Local {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id_local", precision = 38, scale = 0, nullable = false, updatable = false)
+    @Column(name = "id_local", precision = 38, scale = 0)
     private Long id;
 
     @Column(name = "nm_local", precision = 255)

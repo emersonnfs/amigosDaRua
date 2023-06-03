@@ -13,14 +13,14 @@ import lombok.NoArgsConstructor;
 public class Parceria {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id_parceria", precision = 38, scale = 0, nullable = false, updatable = false)
+    @Column(name = "id_parceria", precision = 38, scale = 0)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "id_patrocinador", foreignKey = @ForeignKey(name = "fk_patrocinador_parceria"))
+    @JoinColumn(name = "id_patrocinador")
     private Patrocinador patrocinador;
 
     @ManyToOne
-    @JoinColumn(name = "id_evento", foreignKey = @ForeignKey(name = "fk_evento_parceria"))
+    @JoinColumn(name = "id_evento")
     private Evento evento;
 }

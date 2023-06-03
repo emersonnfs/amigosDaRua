@@ -98,4 +98,11 @@ public class EventoController {
                         .getEventoById(id)).withSelfRel());
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Object> update(@PathVariable Long id, @RequestBody InsertEventoModel evento){
+        var eventoEntity = eventoService.updateEvento(id, evento);
+        var eventoModel = eventoService.getEventoById(eventoEntity.getId());
+        return ResponseEntity.ok(eventoModel);
+    }
+
 }
