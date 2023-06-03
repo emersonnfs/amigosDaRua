@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "tb_ar_parceria")
 public class Parceria {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_parceria", precision = 38, scale = 0)
     private Long id;
 

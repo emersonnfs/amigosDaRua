@@ -15,7 +15,7 @@ import java.time.LocalDate;
 @Table(name = "tb_ar_pessoa_fisica")
 public class PessoaFisica {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_pessoa_fisica", precision = 38, scale = 0)
     private Long id;
 

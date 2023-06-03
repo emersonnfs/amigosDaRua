@@ -15,7 +15,7 @@ import java.util.List;
 @Table(name = "tb_ar_patrocinador")
 public class Patrocinador {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_patrocinador", precision = 38, scale = 0)
     private Long id;
 

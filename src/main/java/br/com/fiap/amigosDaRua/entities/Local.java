@@ -16,7 +16,7 @@ import java.util.List;
 @Table(name = "tb_ar_local")
 public class Local {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_local", precision = 38, scale = 0)
     private Long id;
 

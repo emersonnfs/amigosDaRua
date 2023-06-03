@@ -16,7 +16,7 @@ import java.util.List;
 @Table(name = "tb_ar_evento")
 public class Evento {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_evento", precision = 38, scale = 0)
     private Long id;
 

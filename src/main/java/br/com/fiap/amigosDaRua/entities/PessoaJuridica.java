@@ -14,7 +14,7 @@ import java.math.BigInteger;
 @Table(name = "tb_ar_pessoa_juridica")
 public class PessoaJuridica {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_pessoa_juridica", precision = 38, scale = 0)
     private Long id;
 
