@@ -33,11 +33,11 @@ public class Evento {
     private TipoEventoEnum tipo;
 
     @ManyToOne
-    @JoinColumn(name = "id_responsavel")
+    @JoinColumn(name = "id_responsavel", foreignKey = @ForeignKey(name = "fk_responsavel_evento"))
     private Usuario usuario;
 
     @ManyToOne
-    @JoinColumn(name = "id_local")
+    @JoinColumn(name = "id_local", foreignKey = @ForeignKey(name = "fk_local_evento"))
     private Local local;
 
     @OneToMany(mappedBy = "evento", cascade = CascadeType.ALL)

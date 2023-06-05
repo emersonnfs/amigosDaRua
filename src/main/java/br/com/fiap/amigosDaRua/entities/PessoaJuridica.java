@@ -31,6 +31,6 @@ public class PessoaJuridica {
     private String ramoAtividade;
 
     @OneToOne
-    @JoinColumn(name = "id_responsavel")
+    @JoinColumn(name = "id_responsavel", foreignKey = @ForeignKey(name = "fk_responsavel_juridica"))
     Usuario usuario;
 }

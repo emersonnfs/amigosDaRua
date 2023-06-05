@@ -29,6 +29,6 @@ public class PessoaFisica {
     private LocalDate dataNascimento;
 
     @OneToOne
-    @JoinColumn(name = "id_responsavel")
+    @JoinColumn(name = "id_responsavel", foreignKey = @ForeignKey(name = "fk_responsavel_fisica"))
     Usuario usuario;
 }

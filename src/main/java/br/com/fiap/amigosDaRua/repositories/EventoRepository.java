@@ -5,6 +5,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
@@ -17,4 +18,7 @@ public interface EventoRepository extends JpaRepository<Evento,Long> {
 
     @Query("SELECT e FROM Evento e WHERE e.horaFim <= :currentDateTime")
     Page<Evento> findAllByHoraFimBeforeCurrentDateTime(LocalDateTime currentDateTime, Pageable pageable);
+
+    @Query("SELECT e FROM Evento e WHERE e.usuario.id = :idUsuario")
+    Page<Evento> findAllByIdUsuario(@Param("idUsuario") Long idUsuario, Pageable pageable);
 }

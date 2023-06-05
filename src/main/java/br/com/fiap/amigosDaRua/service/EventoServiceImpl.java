@@ -76,10 +76,21 @@ public class EventoServiceImpl implements EventoService{
     }
 
     @Override
+    public Page<GetEventoModel> getAllByIdUsuario(Long idUsuario, Pageable pageable){
+        var eventos = eventoRepository.findAllByIdUsuario(idUsuario, pageable);
+        return eventos.map(this::convertToGetEventoModel);
+    }
+
+    @Override
     public Evento updateEvento(Long id, InsertEventoModel insertEventoModel){
         var evento = eventoRepository.findById(id).orElseThrow();
         eventoMapperFactory.updateEntityFromModel(insertEventoModel, evento);
         return eventoRepository.save(evento);
+    }
+
+    @Override
+    public void deleteEvento(Long id){
+        eventoRepository.deleteById(id);
     }
 
     private GetEventoModel convertToGetEventoModel(Evento evento){

@@ -17,10 +17,10 @@ public class Parceria {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "id_patrocinador")
+    @JoinColumn(name = "id_patrocinador", foreignKey = @ForeignKey(name = "fk_patrocinador_parceria"))
     private Patrocinador patrocinador;
 
     @ManyToOne
-    @JoinColumn(name = "id_evento")
+    @JoinColumn(name = "id_evento", foreignKey = @ForeignKey(name = "fk_evento_parceria"))
     private Evento evento;
 }

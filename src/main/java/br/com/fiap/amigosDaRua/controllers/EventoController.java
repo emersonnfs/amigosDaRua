@@ -85,6 +85,24 @@ public class EventoController {
         return CollectionModel.of(eventoModels, link);
     }
 
+    @GetMapping("/usuario/{id}")
+    public CollectionModel<EntityModel<GetEventoModel>> getAllByIdUsuario(
+            @PathVariable Long id,
+            @PageableDefault(sort = "horaInicio", direction = Sort.Direction.ASC, page = 0, size = 3)
+            Pageable pageable) {
+        Page<GetEventoModel> eventos = eventoService.getAllByIdUsuario(id, pageable);
+        List<EntityModel<GetEventoModel>> eventoModels = eventos.stream()
+                .map(evento -> EntityModel.of(evento,
+                        WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(EventoController.class)
+                                .getAllDisponivel(pageable)).withRel("eventosDisponiveis"),
+                        WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(EventoController.class)
+                                .getEventoById(evento.getId())).withSelfRel()))
+                .collect(Collectors.toList());
+
+        Link link = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(EventoController.class).getAllByIdUsuario(id, pageable)).withSelfRel();
+        return CollectionModel.of(eventoModels, link);
+    }
+
     @GetMapping("/{id}")
     public EntityModel<GetEventoModel> getEventoById(@PathVariable Long id) {
         var evento = eventoService.getEventoById(id);
@@ -103,6 +121,12 @@ public class EventoController {
         var eventoEntity = eventoService.updateEvento(id, evento);
         var eventoModel = eventoService.getEventoById(eventoEntity.getId());
         return ResponseEntity.ok(eventoModel);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Object> delete(@PathVariable Long id){
+        eventoService.deleteEvento(id);
+        return ResponseEntity.ok("Evento deletado com sucesso!");
     }
 
 }
