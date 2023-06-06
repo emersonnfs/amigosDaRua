@@ -23,6 +23,7 @@ obs:Entrega de DIGITAL BUSINESS ENABLEMENT
 ---
 ## Vídeo Execução do Projeto
 [Aqui vai o vídeo de execução do projeto]
+óbs:Entrega de ENTERPRISE APPLICATION DEVELOPMENT 
 
 ---
 ## Explicação do Projeto
