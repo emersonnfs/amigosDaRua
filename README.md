@@ -29,24 +29,24 @@ obs:Entrega de DIGITAL BUSINESS ENABLEMENT
 ## Explicação do Projeto
 Projeto Amigos Da Rua
 Diante da preocupante crise de fome global que assola nosso mundo, nos dá Amigos da Rua
-estamos empenhados em ampliar nossos esforços através do desenvolvimento de um aplicaƟvo
-inovador. Nosso objeƟvo é fornecer assistência e apoio às pessoas afetadas por essa situação
+estamos empenhados em ampliar nossos esforços através do desenvolvimento de um aplicativo
+inovador. Nosso objetivo é fornecer assistência e apoio às pessoas afetadas por essa situação
 alarmante.
-Com a visão de tornar todo o processo mais acessível e eficiente, nossa iniciaƟva está focada na
-criação de um aplicaƟvo revolucionário. Esse aplicaƟvo pioneiro proporcionará aos usuários a
+Com a visão de tornar todo o processo mais acessível e eficiente, nossa iniciativa está focada na
+criação de um aplicativo revolucionário. Esse aplicativo pioneiro proporcionará aos usuários a
 oportunidade de acessar informações atualizadas em tempo real sobre eventos e ações
 agendadas, que serão patrocinados por parceiros engajados na causa da erradicação da fome.
-Uma das principais funcionalidades do nosso aplicaƟvo será a inclusão de filtros que permiƟrão
+Uma das principais funcionalidades do nosso aplicativo será a inclusão de filtros que permitirão
 ao usuário localizar eventos próximos à sua localização atual. Dessa forma, qualquer pessoa
 poderá facilmente encontrar eventos em andamento ou agendados que ocorrerão nas
 proximidades de onde se encontram.
-Acreditamos que essa abordagem inovadora e práƟca trará um impacto significaƟvo para as
-comunidades afetadas pela fome. Com o auxílio do nosso aplicaƟvo, os indivíduos em situação
+Acreditamos que essa abordagem inovadora e prática trará um impacto significativo para as
+comunidades afetadas pela fome. Com o auxílio do nosso aplicativo, os indivíduos em situação
 de vulnerabilidade poderão ter acesso mais fácil a recursos vitais, como alimentos, água e
-assistência alimentar. Além disso, a parceria com organizações engajadas nessa luta permiƟrá o
+assistência alimentar. Além disso, a parceria com organizações engajadas nessa luta permitirá o
 engajamento direto da comunidade e a colaboração de diferentes setores da sociedade.
-Estamos confiantes de que, por meio desse aplicaƟvo revolucionário, poderemos enfrentar a
-crise de fome global de forma mais efeƟva e oferecer esperança e suporte para aqueles que mais
+Estamos confiantes de que, por meio desse aplicativo revolucionário, poderemos enfrentar a
+crise de fome global de forma mais efetiva e oferecer esperança e suporte para aqueles que mais
 precisam. Com o apoio de nossos parceiros e usuários engajados, esperamos fazer uma diferença
-significaƟva na vida daqueles que lutam diariamente contra a fome e a escassez de recursos
+significativa na vida daqueles que lutam diariamente contra a fome e a escassez de recursos
 básicos. 
