@@ -72,11 +72,12 @@ public class UsuarioController {
         return ResponseEntity.badRequest().build();
     }
 
-    @PostMapping("/api/usuario/{id}/atualizar-senha")
+    @PostMapping("/api/atualizar-senha")
     public ResponseEntity<String> atualizarSenhaUsuario(
-            @PathVariable Long id,
             @RequestBody SenhaAtualizacaoRequest request) {
 
+        String idString = request.getId();
+        Long id = Long.parseLong(idString);
         Usuario usuario = repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
 

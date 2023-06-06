@@ -26,7 +26,7 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.POST, "/api/local").authenticated()
                 .requestMatchers(HttpMethod.POST, "/api/patrocinador").authenticated()
                 .requestMatchers(HttpMethod.PUT, "/api/usuario/{id}").authenticated()
-                .requestMatchers(HttpMethod.POST, "/api/usuario/{id}/atualizar-senha").authenticated()
+                .requestMatchers(HttpMethod.POST, "/api/atualizar-senha").authenticated()
                 .requestMatchers(HttpMethod.POST, "/api/evento").authenticated()
                 .requestMatchers(HttpMethod.PUT, "/api/evento/{id}").authenticated()
                 .requestMatchers(HttpMethod.DELETE, "/api/evento/{id}").authenticated()

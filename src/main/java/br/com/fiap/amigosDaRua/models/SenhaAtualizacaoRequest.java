@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SenhaAtualizacaoRequest {
+    private String id;
     private String senhaAntiga;
     private String senhaNova;
 }
