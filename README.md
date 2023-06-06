@@ -17,7 +17,7 @@
 
 ---
 ## Vídeo Pitch
-[Aqui vai o vídeo Pitch}
+[Aqui vai o vídeo Pitch]
 obs:Entrega de DIGITAL BUSINESS ENABLEMENT
 
 ---
