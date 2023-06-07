@@ -12,13 +12,14 @@
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/23679644-5a6de510-5f3a-4899-b3ae-13c083519c1e?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D23679644-5a6de510-5f3a-4899-b3ae-13c083519c1e%26entityType%3Dcollection%26workspaceId%3D023151ef-6b2e-4785-b1b3-29e7f55cc4c1)
 
 ---
-## Diagrama de Classes
-![DiagramaAmigosDaRua drawio](https://github.com/emersonnfs/amigosDaRua/assets/101301360/2ea9a47f-55bb-4ef5-8501-a71849297573)
-
----
 ## Link YouTube
 https://youtu.be/988giLxn5ro
 _(É perfeitamente possível assistir o vídeo em 1.75x, se enquadrando nos 10 minutos máximos)_
+
+---
+## Diagrama de Classes
+![DiagramaAmigosDaRua drawio](https://github.com/emersonnfs/amigosDaRua/assets/101301360/2ea9a47f-55bb-4ef5-8501-a71849297573)
+
 ---
 ## Explicação do Projeto
 Projeto Amigos Da Rua
