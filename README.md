@@ -14,7 +14,7 @@
 ---
 ## Link YouTube
 https://youtu.be/988giLxn5ro
-_(É perfeitamente possível assistir o vídeo em 1.75x, se enquadrando nos 10 minutos máximos)_
+_(É recomendado e perfeitamente possível assistir o vídeo em 1.75x, se enquadrando nos 10 minutos máximos)_
 
 ---
 ## Diagrama de Classes
