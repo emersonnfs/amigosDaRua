@@ -18,7 +18,7 @@
 ---
 ## Link YouTube
 https://youtu.be/988giLxn5ro
-__ obs(É perfeitamente possível assistir o vídeo em 1.75x, se enquadrando nos 10 minutos máximos) __ 
+__(É perfeitamente possível assistir o vídeo em 1.75x, se enquadrando nos 10 minutos máximos)__ 
 ---
 ## Explicação do Projeto
 Projeto Amigos Da Rua
