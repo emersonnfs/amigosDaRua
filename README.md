@@ -16,15 +16,9 @@
 ![DiagramaAmigosDaRua drawio](https://github.com/emersonnfs/amigosDaRua/assets/101301360/2ea9a47f-55bb-4ef5-8501-a71849297573)
 
 ---
-## Vídeo Pitch
-[Aqui vai o vídeo Pitch]
-obs:Entrega de DIGITAL BUSINESS ENABLEMENT
-
----
-## Vídeo Execução do Projeto
-[Aqui vai o vídeo de execução do projeto]
-óbs:Entrega de ENTERPRISE APPLICATION DEVELOPMENT 
-
+## Link YouTube
+https://youtu.be/988giLxn5ro
+__ obs(É perfeitamente possível assistir o vídeo em 1.75x, se enquadrando nos 10 minutos máximos) __ 
 ---
 ## Explicação do Projeto
 Projeto Amigos Da Rua
