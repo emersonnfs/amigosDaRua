@@ -9,7 +9,7 @@
 
 ---
 ## Collection Postman
-[https://www.postman.com/emersonnfs1996/workspace/amigosdarua/collection/23679644-2cd27d3c-fcfb-416c-bf11-1797a0d5b8cd?action=share&creator=19910955](https://www.postman.com/emersonnfs1996/workspace/globalsolution2023-1/collection/23679644-7dd5d4af-9074-42a0-89c3-f64a0296a54c?action=share&creator=19910955)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/23679644-5a6de510-5f3a-4899-b3ae-13c083519c1e?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D23679644-5a6de510-5f3a-4899-b3ae-13c083519c1e%26entityType%3Dcollection%26workspaceId%3D023151ef-6b2e-4785-b1b3-29e7f55cc4c1)
 
 ---
 ## Diagrama de Classes
